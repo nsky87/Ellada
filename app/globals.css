@@ -1,26 +1,220 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0b0d10;
+  --foreground: #f5f5f4;
+  --accent: #d6b98c;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.light {
+  --accent: #5792c5;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
+  background: radial-gradient(circle at top, #171b22 0%, #0b0d10 60%);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter);
+  overflow-x: hidden;
+}
+
+body.light {
+  background:
+    radial-gradient(circle at top left, #b9e1ff 0%, transparent 35%),
+    radial-gradient(circle at top right, #b9deff 0%, transparent 30%),
+    radial-gradient(circle at bottom, #a2d7ff 0%, transparent 40%),
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #d5ebff 40%,
+      #afd6ff 100%
+    );
+
+  color: #102033;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(153, 153, 153, 0.18);
+  pointer-events: none;
+  z-index: 0;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-cormorant);
+}
+
+/* MAIN TEXT */
+body.light h1,
+body.light h2,
+body.light h3,
+body.light p,
+body.light a,
+body.light button {
+  color: #102033;
+}
+
+/* SECONDARY TEXT */
+body.light .text-neutral-400 {
+  color: #486178 !important;
+}
+
+body.light .text-neutral-500 {
+  color: #000000 !important;
+}
+
+/* BORDERS */
+body.light .border-white\/10 {
+  border-color: rgba(16, 32, 51, 0.08) !important;
+}
+
+/* GLASS CARDS */
+body.light .bg-white\/\[0\.03\] {
+  background: rgba(255, 255, 255, 0.78) !important;
+
+  backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 10px 30px rgba(16,32,51,0.04),
+    inset 0 1px 0 rgba(255,255,255,0.7);
+}
+
+/* DARK CARDS */
+body.light .bg-\[\#11151c\] {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.5),
+      rgba(220,235,248,0.45)
+    ) !important;
+}
+
+/* PROJECT GRADIENTS */
+body.light .from-\[\#1b2029\] {
+  --tw-gradient-from: #d8ebfa !important;
+}
+
+body.light .via-\[\#141922\] {
+  --tw-gradient-via: #bfdcf0 !important;
+}
+
+body.light .to-\[\#0d1015\] {
+  --tw-gradient-to: #a9c9e0 !important;
+}
+
+/* HERO GREECE IMAGES */
+
+.site-atmosphere {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 2;
+  opacity: var(--atmosphere-opacity, 1);
+  transition:
+    opacity 0.4s ease;
+}
+
+.site-atmosphere::before,
+.site-atmosphere::after {
+  content: "";
+  transition: opacity 1s ease, filter 1s ease;
+}
+
+/* LEFT IMAGE */
+.site-atmosphere::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 36vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left center;
+  pointer-events: none;
+  transition:
+    opacity 1s ease,
+    filter 1s ease,
+    background-image 1s ease;
+  mask-image:
+    linear-gradient(
+      to right,
+      black 45%,
+      transparent 100%
+    );
+}
+
+/* RIGHT IMAGE */
+.site-atmosphere::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 42vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right center;
+  pointer-events: none;
+  transition:
+    opacity 1s ease,
+    filter 1s ease,
+    background-image 1s ease;
+  mask-image:
+    linear-gradient(
+      to left,
+      black 40%,
+      transparent 100%
+    );
+}
+
+/* DARK THEME */
+body.dark .site-atmosphere::before {
+  background-image: url("/images/left-greece-dark.png");
+  opacity: 0.4;
+  filter:
+    brightness(1.1)
+    contrast(1.05);
+}
+
+body.dark .site-atmosphere::after {
+  background-image: url("/images/right-sea-dark.png");
+  opacity: 0.38;
+  filter:
+    brightness(1.15)
+    contrast(1.06);
+}
+
+/* LIGHT THEME */
+body.light .site-atmosphere::before {
+  background-image: url("/images/left-greece-light.png");
+  opacity: 0.35;
+  filter:
+    brightness(1.04)
+    saturate(1.05);
+}
+
+body.light .site-atmosphere::after {
+  background-image: url("/images/right-sea-light.png");
+  opacity: 0.35;
+  filter:
+    brightness(1.03)
+    saturate(1.08);
+}
+
+main {
+  position: relative;
+  z-index: 1;
 }
