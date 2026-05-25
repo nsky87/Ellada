@@ -1,13 +1,45 @@
 @import "tailwindcss";
 
 :root {
+  /* BASE */
   --background: #0b0d10;
+  --background-secondary: #171b22;
+
   --foreground: #f5f5f4;
+  --foreground-muted: #a1a1aa;
+
   --accent: #d6b98c;
+
+  /* CARDS */
+  --card-bg: rgba(255,255,255,0.03);
+  --card-border: rgba(255,255,255,0.08);
+
+  /* ATMOSPHERE */
+  --overlay-noise: rgba(153,153,153,0.18);
+
+  /* PROJECT GRADIENTS */
+  --gradient-from: #1b2029;
+  --gradient-via: #141922;
+  --gradient-to: #0d1015;
 }
 
-.light {
+body.light {
+  --background: #ffffff;
+  --background-secondary: #d5ebff;
+
+  --foreground: #102033;
+  --foreground-muted: #486178;
+
   --accent: #5792c5;
+
+  --card-bg: rgba(255,255,255,0.78);
+  --card-border: rgba(16,32,51,0.08);
+
+  --overlay-noise: rgba(255,255,255,0.05);
+
+  --gradient-from: #d8ebfa;
+  --gradient-via: #bfdcf0;
+  --gradient-to: #a9c9e0;
 }
 
 html {
@@ -32,7 +64,6 @@ body.light {
       #d5ebff 40%,
       #afd6ff 100%
     );
-
   color: #102033;
 }
 
@@ -40,7 +71,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(153, 153, 153, 0.18);
+  background: rgba(153, 153, 153, 0.04);
   pointer-events: none;
   z-index: 0;
 }
@@ -63,11 +94,6 @@ body.light p,
 body.light a,
 body.light button {
   color: #102033;
-}
-
-/* SECONDARY TEXT */
-body.light .text-neutral-400 {
-  color: #486178 !important;
 }
 
 body.light .text-neutral-500 {
@@ -183,7 +209,7 @@ body.light .to-\[\#0d1015\] {
 /* DARK THEME */
 body.dark .site-atmosphere::before {
   background-image: url("/images/left-greece-dark.png");
-  opacity: 0.4;
+  opacity: 0.6;
   filter:
     brightness(1.1)
     contrast(1.05);
@@ -191,7 +217,7 @@ body.dark .site-atmosphere::before {
 
 body.dark .site-atmosphere::after {
   background-image: url("/images/right-sea-dark.png");
-  opacity: 0.38;
+  opacity: 0.7;
   filter:
     brightness(1.15)
     contrast(1.06);
@@ -200,7 +226,7 @@ body.dark .site-atmosphere::after {
 /* LIGHT THEME */
 body.light .site-atmosphere::before {
   background-image: url("/images/left-greece-light.png");
-  opacity: 0.35;
+  opacity: 0.7;
   filter:
     brightness(1.04)
     saturate(1.05);
@@ -208,7 +234,7 @@ body.light .site-atmosphere::before {
 
 body.light .site-atmosphere::after {
   background-image: url("/images/right-sea-light.png");
-  opacity: 0.35;
+  opacity: 0.6;
   filter:
     brightness(1.03)
     saturate(1.08);
@@ -217,4 +243,228 @@ body.light .site-atmosphere::after {
 main {
   position: relative;
   z-index: 1;
+}
+
+/* TEXT */
+
+.text-primary {
+  color: var(--foreground);
+}
+
+.text-muted {
+  color: var(--foreground-muted);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+/* SURFACES */
+
+.glass-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+
+  backdrop-filter: blur(18px);
+
+  transition:
+    background 0.4s ease,
+    border-color 0.4s ease,
+    transform 0.4s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-2px);
+}
+
+/* SECTION LABEL */
+
+.section-header {
+  border-color: var(--card-border);
+}
+
+.section-label {
+  color: var(--foreground-muted);
+  border-color: var(--card-border);
+}
+
+/* TIMELINE LINE */
+
+.timeline-line {
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      color-mix(in srgb, var(--accent) 80%, transparent),
+      transparent
+    );
+}
+
+/* TIMELINE LINE */
+
+.icon-surface {
+  border: 1px solid
+    color-mix(in srgb, var(--accent) 20%, transparent);
+
+  background:
+    color-mix(in srgb, var(--accent) 10%, transparent);
+
+  color: var(--accent);
+}
+
+/* CARD EXPERIENCE */
+
+.card-number {
+  color: var(--foreground-muted);
+}
+
+.card-title {
+  color: var(--foreground);
+
+  font-size: 1.875rem;
+  line-height: 1.2;
+  font-weight: 300;
+}
+
+/* PROJECT GRADIENT */
+
+.section-gradient {
+  background:
+    linear-gradient(
+      135deg,
+      var(--gradient-from),
+      var(--gradient-via),
+      var(--gradient-to)
+    );
+}
+
+/* HEADINGS */
+
+.section-title {
+  color: var(--foreground);
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: 1.05;
+  font-weight: 300;
+}
+
+/* INPUTS */
+
+.input-field {
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid var(--card-border);
+  background: rgba(255,255,255,0.04);
+  padding: 1rem 1.25rem;
+  color: var(--foreground);
+  outline: none;
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: var(--accent);
+  background: rgba(255,255,255,0.07);
+}
+
+/* LIGHT THEME INPUTS */
+
+body.light .input-field {
+  background: rgba(255,255,255,0.6);
+}
+
+body.light .input-field:focus {
+  background: rgba(255,255,255,0.85);
+}
+
+/* BUTTON */
+
+.primary-button {
+  border-radius: 999px;
+  background: var(--accent);
+  padding: 1rem 2rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #000;
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease;
+}
+
+.primary-button:hover {
+  transform: scale(1.03);
+}
+
+.primary-button:disabled {
+  opacity: 0.5;
+}
+
+/* GLOW BUTTON */
+
+.secondary-button {
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  padding: 1rem 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  backdrop-filter: blur(10px);
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.secondary-button:hover {
+  transform: scale(1.04);
+  background:
+    color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+/* ICON BUTTON */
+
+.icon-button {
+  border: 1px solid var(--card-border);
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 999px;
+  padding: 0.75rem;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.icon-button:hover {
+  transform: scale(1.08);
+}
+
+
+/* FOOTER */
+
+.footer-border {
+  border-color: var(--card-border);
+}
+
+.footer-heading {
+  color: var(--foreground);
+
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.footer-link {
+  color: var(--foreground-muted);
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--accent);
+
+  transform: translateX(2px);
 }

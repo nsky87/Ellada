@@ -1,57 +1,49 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTheme } from "@/context/ThemeContext";
 
 const items = [
-  "Web Development",
-  "Brand Identity",
-  "Web Design",
-  "Logo Creation",
-  "WordPress",
-  "React",
-  "Website Support",
-  "SEO",
-  "Next.js",
-  "UI / UX",  
-  "Elementor",
-  "Optimization",
+  "Web Development", "Brand Identity", "Web Design", "Logo Creation",
+  "WordPress", "React", "Next.js", "UI / UX", "Website Support",
+  "SEO", "Elementor", "Performance", "Custom Development"
 ];
 
 export default function RunningLine() {
+  const { theme } = useTheme();
+
   return (
-    <section className="relative overflow-hidden py-10">
+    <section className="relative overflow-hidden py-12 border-white/5">
 
-      {/* FADE EDGES */}
-      <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-32 bg-gradient-to-r from-[var(--background)] to-transparent" />
-
-      <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-32 bg-gradient-to-l from-[var(--background)] to-transparent" />
-
-      {/* LINE */}
+      {/* Running Line */}
       <motion.div
         animate={{ x: ["0%", "-50%"] }}
         transition={{
-          duration: 24,
+          duration: 32,
           repeat: Infinity,
           ease: "linear",
         }}
-        className="flex w-max gap-10"
+        className="flex w-max gap-16"
       >
-
         {[...items, ...items].map((item, index) => (
           <span
             key={index}
-            className="
-              whitespace-nowrap
-              text-sm
-              uppercase
-              tracking-[0.35em]
-              text-neutral-500
-            "
+            className={`
+              whitespace-nowrap 
+              text-sm 
+              uppercase 
+              tracking-[0.5em] 
+              font-light
+              transition-opacity duration-700
+              ${theme === "light" 
+                ? "text-neutral-600/70 hover:text-neutral-700" 
+                : "text-neutral-400/70 hover:text-neutral-300"
+              }
+            `}
           >
             {item}
           </span>
         ))}
-
       </motion.div>
     </section>
   );

@@ -143,7 +143,7 @@ export default function Hero() {
         </h1>
 
         <p className="mx-auto mt-12 max-w-xl text-base leading-relaxed text-neutral-500 md:text-lg">
-          Ellada Studio builds and supports modern WordPress & Elementor websites for small businesses — fast, clean and easy to manage.
+          We create beautiful, high-performance websites that don't just look good — they feel special. From elegant WordPress solutions to modern Next.js experiences.
         </p>
         <motion.div
 

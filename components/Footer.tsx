@@ -1,20 +1,8 @@
-"use client";
-
-import { useTheme } from "@/context/ThemeContext";
-import { motion } from "framer-motion";
-
 export default function Footer() {
-    const { theme } = useTheme();
 
   return (
 
-    <footer
-      className={`mt-20 border-t py-16 ${
-        theme === "light"
-          ? "border-black/5"
-          : "border-white/10"
-      }`}
-    >
+    <footer className="footer-border mt-20 border-t py-16">
       <div className="grid gap-16 md:grid-cols-2 lg:grid-cols-4">
 
         {/* BRAND */}
@@ -25,12 +13,7 @@ export default function Footer() {
           </p>
 
           <p
-            className={`mt-6 max-w-sm text-sm leading-relaxed ${
-              theme === "light"
-                ? "text-[#6d7b88]"
-                : "text-neutral-400"
-            }`}
-          >
+            className="text-muted mt-6 max-w-sm text-sm leading-relaxed">
             Modern websites and digital experiences for small businesses,
             creative brands and long-term projects.
           </p>
@@ -41,30 +24,25 @@ export default function Footer() {
         <div>
 
           <h3
-            className={`mb-5 text-sm uppercase tracking-[0.25em] ${
-              theme === "light"
-                ? "text-[#102033]"
-                : "text-white"
-            }`}
-          >
+            className="footer-heading mb-5">
             Navigation
           </h3>
 
           <div className="flex flex-col gap-3 text-sm">
 
-            <a href="#hero" className="hover:text-[var(--accent)] transition-colors duration-300">
+            <a href="#hero" className="footer-link">
               Home
             </a>
 
-            <a href="#services" className="hover:text-[var(--accent)] transition-colors duration-300">
+            <a href="#services" className="footer-link">
               Services
             </a>
 
-            <a href="#work" className="hover:text-[var(--accent)] transition-colors duration-300">
+            <a href="#work" className="footer-link">
               Work
             </a>
 
-            <a href="#contact" className="hover:text-[var(--accent)] transition-colors duration-300">
+            <a href="#contact" className="footer-link">
               Contact
             </a>
 
@@ -76,22 +54,11 @@ export default function Footer() {
         <div>
 
           <h3
-            className={`mb-5 text-sm uppercase tracking-[0.25em] ${
-              theme === "light"
-                ? "text-[#102033]"
-                : "text-white"
-            }`}
-          >
+            className="footer-heading mb-5">
             Contact
           </h3>
 
-          <div
-            className={`flex flex-col gap-3 text-sm ${
-              theme === "light"
-                ? "text-[#6d7b88]"
-                : "text-neutral-400"
-            }`}
-          >
+          <div className="flex flex-col gap-3 text-sm text-muted">
 
             <a
               href="mailto:hello@ellada.studio"
@@ -119,12 +86,7 @@ export default function Footer() {
         <div>
 
           <h3
-            className={`mb-5 text-sm uppercase tracking-[0.25em] ${
-              theme === "light"
-                ? "text-[#102033]"
-                : "text-white"
-            }`}
-          >
+            className="footer-heading mb-5">
             Social
           </h3>
 
@@ -133,7 +95,7 @@ export default function Footer() {
             <a
               href="https://t.me/yourtelegram"
               target="_blank"
-              className="transition-colors duration-300 hover:text-[var(--accent)]"
+              className="footer-link"
             >
               Telegram
             </a>
@@ -141,7 +103,7 @@ export default function Footer() {
             <a
               href="https://wa.me/41000000000"
               target="_blank"
-              className="transition-colors duration-300 hover:text-[var(--accent)]"
+              className="footer-link"
             >
               WhatsApp
             </a>
@@ -149,7 +111,7 @@ export default function Footer() {
             <a
               href="https://github.com/yourgithub"
               target="_blank"
-              className="transition-colors duration-300 hover:text-[var(--accent)]"
+              className="footer-link"
             >
               GitHub
             </a>
@@ -157,7 +119,7 @@ export default function Footer() {
             <a
               href="https://www.behance.net/"
               target="_blank"
-              className="transition-colors duration-300 hover:text-[var(--accent)]"
+              className="footer-link"
             >
               Behance
             </a>
@@ -169,13 +131,7 @@ export default function Footer() {
       </div>
 
       {/* BOTTOM */}
-      <div
-        className={`mt-16 flex flex-col gap-4 border-t pt-8 text-sm md:flex-row md:items-center md:justify-between ${
-          theme === "light"
-            ? "border-black/5 text-[#6d7b88]"
-            : "border-white/10 text-neutral-500"
-        }`}
-      >
+      <div className="footer-border text-muted mt-16 flex flex-col gap-4 border-t pt-8 text-sm md:flex-row md:items-center md:justify-between">
 
         <p>
           © 2026 Ellada Studio. All rights reserved.

@@ -10,26 +10,18 @@ import {
   Layers3,
 } from "lucide-react";
 
-import { useTheme } from "@/context/ThemeContext";
-
 export default function Experience() {
-  const { theme } = useTheme();
 
   return (
-    <section className={`relative overflow-hidden py-40
-      ${
-        theme === "light"
-          ? "theme-light"
-          : "theme-dark"
-      }`}>
+    <section className="relative overflow-hidden py-40">
 
-      <div className="mb-24 flex items-center justify-between border-b border-white/10 pb-6">
+      <div className="section-header mb-24 flex items-center justify-between border-b pb-6">
 
         <h2 className="text-3xl font-light md:text-5xl">
           What You Get
         </h2>
 
-        <span className="text-sm uppercase tracking-[0.3em] text-neutral-500">
+        <span className="text-muted text-sm uppercase tracking-[0.3em]">
           Philosophy & Process
         </span>
 
@@ -52,13 +44,7 @@ export default function Experience() {
 
           viewport={{ once: true }}
 
-          className={`absolute left-0 top-1/2 hidden h-[1px] w-full origin-left md:block
-          ${
-            theme === "light"
-              ? "bg-gradient-to-r from-[#89a6bf]/10 via-[#89a6bf] to-[#89a6bf]/10"
-              : "bg-gradient-to-r from-transparent via-[var(--accent)] to-transparent"
-          }`}
-        />
+          className="timeline-line absolute left-0 top-1/2 hidden h-px w-full origin-left md:block"/>
 
         <div className="grid gap-10 md:grid-cols-4">
 
@@ -115,7 +101,7 @@ export default function Experience() {
                 viewport={{ once: true }}
 
                 whileHover={{
-                  y: -10,
+                  y: -6,
                 }}
 
                 className={`relative z-10
@@ -127,66 +113,35 @@ export default function Experience() {
               >
 
                 <div
-                  className={`group rounded-[2rem] border p-8 backdrop-blur-xl transition-all duration-500
-                  ${
-                    theme === "light"
-                      ? "border-white/40 bg-white/40 hover:bg-white/60"
-                      : "border-white/10 bg-white/[0.03] hover:bg-white/[0.05]"
-                  }`}
-                >
+                  className="glass-card group rounded-[2rem] p-8">
 
                   {/* ICON */}
 
-                  <div
-                    className={`mb-8 flex h-14 w-14 items-center justify-center rounded-full border
-                    ${
-                      theme === "light"
-                        ? "border-[#89a6bf]/30 bg-[#89a6bf]/10"
-                        : "border-[var(--accent)]/20 bg-[var(--accent)]/10"
-                    }`}
-                  >
+                  <div className="icon-surface mb-8 flex h-14 w-14 items-center justify-center rounded-full">
 
                     <Icon
                       size={24}
-                      className={`transition-all duration-500
-                      ${
-                        theme === "light"
-                          ? "text-[#6f8ba3]"
-                          : "text-[var(--accent)]"
-                      }`}
+                      className="text-accent transition-all duration-500"
                     />
 
                   </div>
 
                   {/* NUMBER */}
 
-                  <p
-                    className={`mb-4 text-sm uppercase tracking-[0.3em]
-                    ${
-                      theme === "light"
-                        ? "text-[#7c8c9c]"
-                        : "text-neutral-500"
-                    }`}
-                  >
+                  <p className="card-number mb-4 text-sm uppercase tracking-[0.3em]">
                     0{index + 1}
                   </p>
 
                   {/* TITLE */}
 
-                  <h3 className="mb-5 text-3xl font-light">
+                  <h3 className="card-title mb-5">
                     {item.title}
                   </h3>
 
                   {/* TEXT */}
 
                   <p
-                    className={`leading-relaxed
-                    ${
-                      theme === "light"
-                        ? "text-[#506070]"
-                        : "text-neutral-400"
-                    }`}
-                  >
+                    className="leading-relaxed text-muted">
                     {item.text}
                   </p>
 

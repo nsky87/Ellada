@@ -34,7 +34,6 @@ export default function Home() {
       <CursorGlow />
       <ParallaxBackground />
       <Grain />
-
       <Header />  
       <Hero />
       <About />
@@ -42,8 +41,8 @@ export default function Home() {
       <Services />
       <Work />
       <Philosophy />
-      <Experience />
-      <RunningLine />      
+      <RunningLine />    
+      <Experience />        
       <Contact />
       <Footer />
 

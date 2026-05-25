@@ -1,12 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useTheme } from "@/context/ThemeContext";
 import { useState } from "react";
 
 export default function Contact() {
-
-  const { theme } = useTheme();
 
   const [form, setForm] = useState({
     name: "",
@@ -15,12 +12,10 @@ export default function Contact() {
     website: "",
   });
 
-  const floatUp = {
-    y: [0, -4, 0],
-  };
-
-  const floatDown = {
-    y: [0, 4, 0],
+  const floating = {
+    duration: 3,
+    repeat: Infinity,
+    ease: "easeInOut",
   };
 
   const [loading, setLoading] = useState(false);
@@ -67,15 +62,12 @@ export default function Contact() {
   };
 
   return (
-    <section
-      id="contact"
-      className="relative overflow-hidden py-32"
-    >
+    <section id="contact" className="relative overflow-hidden py-20">
 
       {/* GLOW */}
       <div className="pointer-events-none absolute inset-0">
 
-        <div className="absolute right-0 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-[color:var(--accent)]/10 blur-3xl" />
+        <div className="absolute right-0 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-[color:var(--accent)]/10 blur-2xl" />
 
       </div>
 
@@ -89,30 +81,20 @@ export default function Contact() {
           viewport={{ once: true }}
         >
 
-          <p className="mb-5 text-sm uppercase tracking-[0.35em] text-neutral-500">
+          <p className="text-sm mb-5 border-b pb-6 uppercase tracking-[0.35em] text-neutral-500">
             Contact
           </p>
 
           <h2
-            className={`text-5xl font-light leading-[1.05] md:text-7xl ${
-              theme === "light"
-                ? "text-[#102033]"
-                : "text-white"
-            }`}
-          >
+            className="section-title">
             Let's create
-            <span className="block italic text-[var(--accent)]">
+            <span className="text-accent block italic">
               something timeless.
             </span>
           </h2>
 
           <p
-            className={`mt-10 max-w-md text-lg leading-relaxed ${
-              theme === "light"
-                ? "text-[#6d7b88]"
-                : "text-neutral-400"
-            }`}
-          >
+            className="mt-10 max-w-md text-lg leading-relaxed text-muted">
             Tell us about your project. We'll suggest the best solution and help you build or improve your website.
           </p>
 
@@ -132,7 +114,7 @@ export default function Contact() {
                 ease: "easeInOut",
               }}
               whileHover={{ scale: 1.12 }}
-              className="p-3 rounded-full border border-white/10 bg-white/5 backdrop-blur-md transition-all"
+              className="p-3 rounded-full icon-button transition-all"
             >
               <svg
                 width="35"
@@ -164,7 +146,7 @@ export default function Contact() {
                 },
               }}
               whileHover={{ scale: 1.12 }}
-              className="p-3 rounded-full border border-white/10 bg-white/5 backdrop-blur-md transition-all"
+              className="p-3 rounded-full icon-button transition-all"
             >
               <svg
                 width="35"
@@ -195,12 +177,7 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className={`relative rounded-[2.5rem] border p-8 md:p-10 ${
-            theme === "light"
-              ? "border-black/5 bg-black/[0.02]"
-              : "border-white/10 bg-white/[0.03]"
-          }`}
-        >
+          className="glass-card relative rounded-[2.5rem] p-8 md:p-10">
 
           <div className="grid gap-6">
 
@@ -214,12 +191,7 @@ export default function Contact() {
                   name: e.target.value,
                 })
               }
-              className={`h-14 rounded-2xl border px-5 outline-none transition-all duration-300 ${
-                theme === "light"
-                  ? "border-black/10 bg-white/60 focus:border-black/30"
-                  : "border-white/10 bg-black/20 focus:border-white/30"
-              }`}
-            />
+              className="input-field h-14" />
 
             <input
               type="email"
@@ -232,12 +204,7 @@ export default function Contact() {
                   email: e.target.value,
                 })
               }
-              className={`h-14 rounded-2xl border px-5 outline-none transition-all duration-300 ${
-                theme === "light"
-                  ? "border-black/10 bg-white/60 focus:border-black/30"
-                  : "border-white/10 bg-black/20 focus:border-white/30"
-              }`}
-            />
+              className="input-field h-14" />
 
             <textarea
               rows={7}
@@ -250,12 +217,7 @@ export default function Contact() {
                   message: e.target.value,
                 })
               }
-              className={`rounded-2xl border p-5 outline-none resize-none transition-all duration-300 ${
-                theme === "light"
-                  ? "border-black/10 bg-white/60 focus:border-black/30"
-                  : "border-white/10 bg-black/20 focus:border-white/30"
-              }`}
-            />
+              className="input-field p-5 resize-none" />
 
             {/* HONEYPOT */}
             <input
@@ -276,7 +238,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={loading}
-                className="rounded-full bg-[var(--accent)] px-8 py-4 text-sm uppercase tracking-[0.25em] text-black transition-all duration-500 hover:scale-[1.03] disabled:opacity-50"
+                className="primary-button"
               >
                 {loading ? "Sending..." : "Send Inquiry"}
               </button>

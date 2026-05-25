@@ -1,11 +1,6 @@
 "use client";
 
-import { useTheme } from "@/context/ThemeContext";
-
 export default function About() {
-
-  const { theme } = useTheme();
-
   return (
     <section
       id="about"
@@ -16,20 +11,14 @@ export default function About() {
         {/* LEFT */}
         <div>
 
-          <p className="mb-5 text-sm uppercase tracking-[0.35em] text-neutral-500 border-b border-white/10 pb-6">
+          <p className="section-label mb-5 border-b pb-6 text-sm uppercase tracking-[0.35em]">
             About
           </p>
-          
 
-          <h2
-            className={`max-w-3xl text-4xl font-light leading-tight md:text-6xl ${
-              theme === "light"
-                ? "text-[#102033]"
-                : "text-white"
-            }`}
-          >
+          <h2 className="text-primary max-w-3xl text-4xl font-light leading-tight md:text-6xl">
             Calm digital experiences
-            <span className="block italic text-[var(--accent)]">
+
+            <span className="text-accent block italic">
               built with clarity
             </span>
           </h2>
@@ -39,25 +28,13 @@ export default function About() {
         {/* RIGHT */}
         <div className="max-w-xl">
 
-          <p
-            className={`text-lg leading-relaxed ${
-              theme === "light"
-                ? "text-[#5f6b63]"
-                : "text-neutral-300"
-            }`}
-          >
+          <p className="text-primary text-base leading-relaxed">
             Ellada Studio creates modern websites for small businesses,
             personal brands and creative projects — combining visual
             atmosphere, clean development and easy-to-manage systems.
           </p>
 
-          <p
-            className={`mt-6 text-base leading-relaxed ${
-              theme === "light"
-                ? "text-[#6d7b88]"
-                : "text-neutral-400"
-            }`}
-          >
+          <p className="text-muted mt-6 text-base leading-relaxed">
             We work with WordPress, Elementor and modern frontend
             technologies to build fast, responsive websites focused
             on clarity, trust and long-term support.
@@ -87,31 +64,14 @@ export default function About() {
 
           <div
             key={item.title}
-            className={`group rounded-[2rem] border p-8 backdrop-blur-xl transition-all duration-500
-            ${
-              theme === "light"
-                ? "border-white/40 bg-white/40 hover:bg-white/60"
-                : "border-white/10 bg-white/[0.03] hover:bg-white/[0.05]"
-            }`}
+            className="glass-card rounded-[2rem] p-8"
           >
 
-            <h3
-              className={`mb-4 text-xl font-bold ${
-                theme === "light"
-                  ? "text-[#102033]"
-                  : "text-white"
-              }`}
-            >
+            <h3 className="text-primary mb-4 text-xl font-bold">
               {item.title}
             </h3>
 
-            <p
-              className={`text-sm leading-relaxed ${
-                theme === "light"
-                  ? "text-[#6d7b88]"
-                  : "text-neutral-400"
-              }`}
-            >
+            <p className="text-muted text-sm leading-relaxed">
               {item.text}
             </p>
 

@@ -36,12 +36,12 @@ export default function Problem() {
         }`}>
           Most small business websites
           <span className="block italic text-[var(--accent)]">
-            look good — but don’t bring clients
+            look good — but don't bring clients
           </span>
         </h2>
 
         <p className={`mt-10 text-lg leading-relaxed ${
-          theme === "light" ? "text-[#6d7b88]" : "text-neutral-400"
+          theme === "light" ? "text-[#6d7b88]" : "text-muted"
         }`}>
           We focus on clarity, structure and performance —
           so your website actually turns visitors into enquiries,

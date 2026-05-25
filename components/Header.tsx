@@ -57,7 +57,7 @@ export default function Header() {
               className={`text-sm transition-all duration-300 ${
                 theme === "light"
                   ? "text-[#355070] hover:text-[#102033]"
-                  : "text-neutral-400 hover:text-white"
+                  : "text-muted hover:text-white"
               }`}
             >
               {item.label}

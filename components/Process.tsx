@@ -71,7 +71,7 @@ export default function ServicesGrid() {
               {item.title}
             </h3>
 
-            <p className="text-sm text-neutral-400 leading-relaxed">
+            <p className="text-sm text-muted leading-relaxed">
               {item.desc}
             </p>
           </motion.div>
