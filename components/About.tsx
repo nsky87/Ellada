@@ -35,9 +35,8 @@ export default function About() {
           </p>
 
           <p className="text-muted mt-6 text-base leading-relaxed">
-            We work with WordPress, Elementor and modern frontend
-            technologies to build fast, responsive websites focused
-            on clarity, trust and long-term support.
+            We work with WordPress, Next.js and modern frontend technologies to build
+            fast, responsive websites focused on clarity, trust and long-term support.
           </p>
 
         </div>

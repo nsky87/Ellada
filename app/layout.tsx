@@ -3,17 +3,20 @@ import "./globals.css";
 import { Inter, Cormorant_Garamond } from "next/font/google";
 
 import { ThemeProvider } from "@/context/ThemeContext";
+import Header from "@/components/Header";
 
 export const metadata = {
-  title: "Ellada Studio | WordPress Website Design & Support",
+  title: "Ellada Studio | Web Design & Development Studio",
   description:
-    "Ellada Studio builds WordPress & Elementor websites for small businesses. Clean design, fast performance and long-term support.",
+    "Ellada Studio designs and builds beautiful, fast websites for small businesses and personal brands — WordPress, Next.js, and custom solutions with long-term support.",
   keywords: [
-    "WordPress website design",
-    "Elementor developer",
-    "website maintenance services",
     "web design studio",
-    "small business website",
+    "small business website design",
+    "Next.js web development",
+    "WordPress website design",
+    "custom website development",
+    "web design and development",
+    "personal brand website",
   ],
 };
 
@@ -35,6 +38,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var theme = localStorage.getItem('theme') || 'dark';
+                  document.body.classList.add(theme);
+                } catch(e) {}
+              })();
+            `,
+          }}
+        />
+      </head>
       <body
         className={`
           ${inter.variable}
@@ -45,9 +62,7 @@ export default function RootLayout({
         {/* THEME PROVIDER WRAP */}
         <ThemeProvider>
           <div className="site-atmosphere" />
-
-          {/*<div className="absolute inset-0 bg-black/35 z-[1]" />*/}
-
+          <Header />      
           {children}
 
         </ThemeProvider>

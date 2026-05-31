@@ -6,7 +6,7 @@ import Grain from "@/components/Grain";
 import CursorGlow from "@/components/effects/CursorGlow";
 import ParallaxBackground from "@/components/effects/ParallaxBackground";
 
-import Header from "@/components/Header";
+
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Problem from "@/components/Problem";
@@ -24,7 +24,7 @@ export default function Home() {
 
   return (
     <main
-      className={`relative min-h-screen overflow-hidden px-6 md:px-16 transition-colors duration-500 ${
+      className={`relative min-h-screen px-6 md:px-16 transition-colors duration-500 ${
         theme === "light"
           ? "text-[#102033]"
           : "bg-[#0b0d10] text-white"
@@ -33,8 +33,7 @@ export default function Home() {
 
       <CursorGlow />
       <ParallaxBackground />
-      <Grain />
-      <Header />  
+      <Grain /> 
       <Hero />
       <About />
       <Problem />
