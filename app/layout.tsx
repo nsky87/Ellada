@@ -58,6 +58,8 @@ const cormorant = Cormorant_Garamond({
   weight: ["300", "400", "500", "600"],
 });
 
+import { GoogleAnalytics } from "@next/third-parties/google";
+
 export default function RootLayout({
   children,
 }: {
@@ -107,6 +109,8 @@ export default function RootLayout({
           {children}
 
         </ThemeProvider>
+
+        <GoogleAnalytics gaId="G-JMVP3H49C2" />
 
       </body>
     </html>
