@@ -108,7 +108,7 @@ export default function Pricing() {
             </ul>
             <a
               href="#contact"
-              className={plan.highlight ? "primary-button block text-center mt-8" : "pricing-cta-outline block text-center"}
+              className={plan.highlight ? "primary-button block text-center mt-8" : "pricing-cta-outline block text-center mt-8"}
             >
               {plan.cta}
             </a>
