@@ -67,7 +67,7 @@ body.light .service-card:hover {
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   padding-bottom: 1rem;
-  /* скрываем скроллбар */
+  scroll-behavior: smooth;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -78,6 +78,7 @@ body.light .service-card:hover {
 
 .services-slide {
   scroll-snap-align: start;
+  scroll-snap-stop: always;
   min-width: 320px;
   width: 320px;
 }

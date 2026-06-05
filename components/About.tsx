@@ -15,7 +15,7 @@ export default function About() {
             About
           </p>
 
-          <h2 className="text-primary max-w-3xl text-4xl font-light leading-tight md:text-6xl">
+          <h2 className="text-primary max-w-3xl text-3xl font-light leading-tight md:text-5xl">
             We build websites
 
             <span className="text-accent block italic">

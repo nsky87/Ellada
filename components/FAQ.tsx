@@ -43,7 +43,7 @@ export default function FAQ() {
         viewport={{ once: true }}
         className="section-header mb-16 flex items-center justify-between border-b pb-6"
       >
-        <h2 className="text-3xl font-light md:text-5xl">Questions & Answers</h2>
+        <h2 className="text-2xl font-light md:text-5xl">Questions & Answers</h2>
         <span className="section-label text-sm uppercase tracking-[0.3em]">FAQ</span>
       </motion.div>
 

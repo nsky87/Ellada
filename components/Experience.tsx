@@ -31,8 +31,8 @@ export default function Experience() {
     <section className="relative overflow-hidden py-24 md:py-32">
 
       <div className="section-header mb-24 flex items-center justify-between border-b pb-6">
-        <h2 className="text-3xl font-light md:text-5xl">What You Get</h2>
-        <span className="section-label text-sm uppercase tracking-[0.3em]">
+        <h2 className="text-2xl font-light md:text-4xl">What You Get</h2>
+        <span className="section-label text-sm uppercase">
           Philosophy & Process
         </span>
       </div>

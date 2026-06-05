@@ -17,3 +17,11 @@
   font-size: 0.875rem;
   color: #4ade80;
 }
+
+@media (max-width: 768px) {
+  .contact-glow {
+    width: 200px;
+    height: 200px;
+    opacity: 0.5;
+  }
+}

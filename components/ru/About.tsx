@@ -11,7 +11,7 @@ export default function About() {
           <p className="section-label mb-5 border-b pb-6 text-sm uppercase tracking-[0.35em]">
             О нас
           </p>
-          <h2 className="text-primary max-w-3xl text-4xl font-light leading-tight md:text-6xl">
+          <h2 className="text-primary max-w-3xl text-3xl font-light leading-tight md:text-5xl">
             Мы создаём веб-сайты,
             <span className="text-accent block italic">
               которые действительно работают на ваш бизнес.

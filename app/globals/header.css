@@ -37,8 +37,12 @@ body.light .site-header {
 body.light .light-logo { display: block; }
 body.light .dark-logo  { display: none; }
 
+.mobile-menu {
+  background: color-mix(in srgb, var(--accent) 93%, transparent);
+}
+
 .nav-link {
-  color: var(--foreground-muted);
+  color: #353535;
 
   font-size: 0.875rem;
 
@@ -79,6 +83,12 @@ body.light .header-icon-button {
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .header-logo  {
+    font-size: 1.1rem;
+  }
 }
 
 /* LANG SWITCH */

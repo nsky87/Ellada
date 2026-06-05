@@ -71,7 +71,7 @@ export default function Process() {
             >
 
               {/* DOT на линии */}
-              <div className="process-dot" />
+              <div className="process-dot hidden md:block" />
 
               {/* NUMBER */}
               <p className="process-number">{step.number}</p>

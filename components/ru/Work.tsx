@@ -64,7 +64,7 @@ export default function Work() {
         </span>
       </div>
 
-      <div className="grid gap-10 md:grid-cols-3 lg:grid-cols-4">
+      <div className="work-grid">
         {projects.map((project, index) => (
           <div key={project.title} className="flex flex-col">
 

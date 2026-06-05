@@ -83,9 +83,9 @@ export default function Header() {
               {menuOpen ? <X size={18} /> : <Menu size={18} />}
             </button>
 
-            <button className="primary-button text-xs">
+            <a href="#contact" className="primary-button text-xs hidden md:inline-block">
               {ctaLabel}
-            </button>
+            </a>
 
           </div>
         </div>

@@ -90,3 +90,11 @@ body.light .site-atmosphere::after {
     brightness(1.03)
     saturate(1.08);
 }
+
+@media (max-width: 768px) {
+  body.dark .site-atmosphere::before,
+  body.dark .site-atmosphere::after {
+    opacity: 0.4;
+    filter: brightness(0.5) contrast(1.05);
+  }
+}

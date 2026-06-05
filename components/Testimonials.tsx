@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 const testimonials = [
   {
@@ -37,6 +37,7 @@ const testimonials = [
 export default function Testimonials() {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(1);
+  const touchStartX = useRef(0);
 
   const go = (index: number) => {
     setDirection(index > current ? 1 : -1);
@@ -85,6 +86,12 @@ export default function Testimonials() {
             exit="exit"
             transition={{ duration: 0.5, ease: "easeInOut" }}
             className="testimonial-card"
+            onTouchStart={(e) => { touchStartX.current = e.touches[0].clientX; }}
+            onTouchEnd={(e) => {
+              const diff = touchStartX.current - e.changedTouches[0].clientX;
+              if (diff > 50) next();
+              if (diff < -50) prev();
+            }}
           >
             <div className="testimonial-quote-mark">"</div>
 
@@ -106,7 +113,7 @@ export default function Testimonials() {
         <div className="mt-10 flex items-center justify-between">
 
           {/* СТРЕЛКИ */}
-          <div className="flex gap-3">
+          <div className="hidden md:flex gap-3">
             <button onClick={prev} className="services-arrow" aria-label="Previous">
               ←
             </button>
@@ -116,7 +123,7 @@ export default function Testimonials() {
           </div>
 
           {/* ТОЧКИ */}
-          <div className="flex gap-2">
+          <div className="flex gap-2 mx-auto md:mx-0">
             {testimonials.map((_, i) => (
               <button
                 key={i}
@@ -128,7 +135,7 @@ export default function Testimonials() {
           </div>
 
           {/* СЧЁТЧИК */}
-          <p className="testimonial-counter">
+          <p className="testimonial-counter hidden md:block">
             {String(current + 1).padStart(2, "0")} / {String(testimonials.length).padStart(2, "0")}
           </p>
 

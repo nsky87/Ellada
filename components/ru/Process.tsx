@@ -64,7 +64,7 @@ export default function Process() {
               viewport={{ once: true }}
               className="process-step group"
             >
-              <div className="process-dot" />
+              <div className="process-dot hidden md:block" />
               <p className="process-number">{step.number}</p>
               <h3 className="process-title">{step.title}</h3>
               <div className="process-card-line mb-5 transition-all duration-700 group-hover:w-12" />
