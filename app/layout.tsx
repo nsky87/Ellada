@@ -18,6 +18,9 @@ export const metadata = {
     "web design and development",
     "personal brand website",
   ],
+  verification: {
+    google: "AMjazb6I7pWgeyAsa6EDGZbdTBPPZ8bhhovJUOkFpyc",
+  },
   openGraph: {
     title: "Ellada Studio | Web Design & Development Studio",
     description:
