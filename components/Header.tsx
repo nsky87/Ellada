@@ -2,24 +2,31 @@
 
 import { motion } from "framer-motion";
 import { Moon, Sun, Menu, X } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useTheme } from "@/context/ThemeContext";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const { theme, toggleTheme } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
+  const pathname = usePathname();
+  const lang = pathname.startsWith("/ru") ? "ru" : "en";
 
-  // Предотвращаем hydration mismatch
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const navItems = lang === "ru"
+    ? [
+        { label: "Услуги", href: "#services" },
+        { label: "Работы", href: "#work" },
+        { label: "Контакты", href: "#contact" },
+      ]
+    : [
+        { label: "Services", href: "#services" },
+        { label: "Work", href: "#work" },
+        { label: "Contact", href: "#contact" },
+      ];
 
-  const navItems = [
-    { label: "Services", href: "#services" },
-    { label: "Work", href: "#work" },
-    { label: "Contact", href: "#contact" },
-  ];
+  const ctaLabel = lang === "ru" ? "Написать нам" : "Let's Talk";
+  const switchHref = lang === "ru" ? "/" : "/ru";
+  const switchLabel = lang === "ru" ? "EN" : "RU";
 
   return (
     <>
@@ -27,21 +34,24 @@ export default function Header() {
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="fixed left-1/2 top-6 z-100 w-[92%] max-w-6xl -translate-x-1/2"
+        className="fixed left-1/2 top-6 z-50 w-[92%] max-w-6xl -translate-x-1/2"
       >
-        <div 
-          className="site-header flex items-center justify-between rounded-full px-6 py-4"
-          style={{
-            background: theme === "dark" 
-              ? "rgba(11, 13, 16, 0.98)" 
-              : "rgba(255, 255, 255, 0.98)",
-            backdropFilter: "blur(32px)",
-            border: "1px solid rgba(214, 185, 140, 0.2)",
-            boxShadow: "0 0 20px rgba(0, 0, 0, 0.15)",
-          }}
-        >
+        <div className="site-header flex items-center justify-between rounded-full px-6 py-4">
 
           <a href="#hero" className="header-logo">Ellada</a>
+
+          {/* <a href={lang === "ru" ? "/ru" : "/"} className="flex items-center">
+            <img
+              src="/images/logo-dark.png"
+              alt="Ellada Studio"
+              className="dark-logo h-12 w-auto pl-1"
+            />
+            <img
+              src="/images/logo-light.png"
+              alt="Ellada Studio"
+              className="light-logo h-12 w-auto pl-1"
+            />
+          </a>*/}
 
           <nav className="hidden gap-8 md:flex">
             {navItems.map((item) => (
@@ -52,14 +62,17 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <button 
-              onClick={toggleTheme} 
+
+            <a href={switchHref} className="header-lang-switch">
+              {switchLabel}
+            </a>
+
+            <button
+              onClick={toggleTheme}
               className="header-icon-button flex items-center justify-center"
               aria-label="Toggle theme"
             >
-              {mounted && (
-                theme === "dark" ? <Sun size={18} /> : <Moon size={18} />
-              )}
+              {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
             </button>
 
             <button
@@ -70,13 +83,14 @@ export default function Header() {
               {menuOpen ? <X size={18} /> : <Menu size={18} />}
             </button>
 
-            <button className="hero-button-primary text-xs">Let's Talk</button>
-          </div>
+            <button className="primary-button text-xs">
+              {ctaLabel}
+            </button>
 
+          </div>
         </div>
       </motion.header>
 
-      {/* Mobile Menu */}
       {menuOpen && (
         <motion.div
           initial={{ opacity: 0, y: -10 }}

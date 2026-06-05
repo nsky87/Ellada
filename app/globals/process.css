@@ -1,0 +1,88 @@
+.process-line {
+  position: absolute;
+  top: 2.2rem;
+  left: 0;
+  right: 0;
+  height: 1px;
+  origin: left;
+  display: none;
+  background: linear-gradient(
+    to right,
+    transparent,
+    color-mix(in srgb, var(--accent) 50%, transparent),
+    transparent
+  );
+}
+
+@media (min-width: 768px) {
+  .process-line {
+    display: block;
+  }
+}
+
+.process-step {
+  position: relative;
+  z-index: 1;
+  padding-top: 3.5rem;
+}
+
+.process-dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  background: var(--accent);
+  border: 2px solid var(--background);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--accent) 50%, transparent);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.process-step:hover .process-dot {
+  transform: scale(1.4);
+  box-shadow: 0 0 20px color-mix(in srgb, var(--accent) 70%, transparent);
+}
+
+.process-number {
+  font-family: var(--font-cormorant);
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--accent);
+  opacity: 0.25;
+  margin-bottom: 1rem;
+  transition: opacity 0.3s ease;
+}
+
+.process-step:hover .process-number {
+  opacity: 0.5;
+}
+
+.process-title {
+  font-family: var(--font-cormorant);
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+}
+
+.process-card-line {
+  height: 1px;
+  width: 2rem;
+  background: color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+.process-text {
+  font-size: 0.875rem;
+  line-height: 1.75;
+  color: var(--foreground-muted);
+}
+
+.process-duration {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--accent);
+  opacity: 0.6;
+}

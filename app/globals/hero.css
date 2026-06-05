@@ -1,0 +1,129 @@
+.hero-title {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 300;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+}
+
+.hero-subtitle {
+  display: block;
+  margin-top: 1rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 300;
+  letter-spacing: normal;
+  color: var(--foreground-muted);
+}
+
+.hero-tagline {
+  display: block;
+  margin-top: 1.5rem;
+  font-style: italic;
+  color: var(--accent);
+}
+
+.hero-description {
+  margin: 3rem auto 0;
+  max-width: 36rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--foreground-muted);
+}
+
+.hero-divider {
+  height: 1px;
+  background: var(--accent);
+}
+
+.hero-button-primary {
+  border-radius: 999px;
+  padding: 1rem 2rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  color: var(--foreground);
+  transition: transform 0.4s ease, background 0.4s ease;
+}
+
+.hero-button-primary:hover {
+  transform: scale(1.05);
+  background: color-mix(in srgb, var(--accent) 22%, transparent);
+  cursor: pointer;
+}
+
+.hero-button-secondary {
+  border-radius: 999px;
+  padding: 1rem 2rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  border: 1px solid var(--card-border);
+  color: var(--foreground-muted);
+  transition: transform 0.4s ease, background 0.4s ease;
+}
+
+.hero-button-secondary:hover {
+  background: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+}
+
+body.light .hero-button-primary {
+  border-color: rgba(87, 146, 197, 0.5);
+  color: #102033;
+}
+
+body.light .hero-button-secondary {
+  border-color: rgba(16, 32, 51, 0.25);
+  color: #102033;
+}
+
+.hero-ring {
+  border: 1px solid rgba(214, 185, 140, 0.06);
+  box-shadow: 0 0 80px rgba(214, 185, 140, 0.04);
+}
+
+.hero-glow {
+  background: radial-gradient(
+    circle,
+    rgba(214, 185, 140, 0.12) 0%,
+    rgba(214, 185, 140, 0.03) 45%,
+    transparent 72%
+  );
+}
+
+.hero-dust {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(48px);
+  background: radial-gradient(
+    circle,
+    rgba(214, 185, 140, 0.09) 0%,
+    transparent 70%
+  );
+}
+
+.hero-dust--left {
+  left: 22%;
+  top: 34%;
+  width: 180px;
+  height: 180px;
+}
+
+.hero-dust--right {
+  right: 18%;
+  top: 38%;
+  width: 220px;
+  height: 220px;
+  opacity: 0.85;
+}
+
+.hero-dust--bottom {
+  bottom: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 240px;
+  height: 240px;
+  opacity: 0.65;
+}

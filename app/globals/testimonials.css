@@ -1,0 +1,112 @@
+.testimonial-bg-quote {
+  position: absolute;
+  top: 8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-cormorant);
+  font-size: 28rem;
+  line-height: 1;
+  color: var(--accent);
+  opacity: 0.03;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+.testimonial-card {
+  position: relative;
+  z-index: 1;
+  border-radius: 2rem;
+  border: 1px solid var(--card-border);
+  padding: 2.5rem;
+  background: rgba(15, 19, 25, 0.6);
+  backdrop-filter: blur(18px);
+  transition:
+    border-color 0.5s ease,
+    background 0.5s ease,
+    transform 0.4s ease;
+}
+
+.testimonial-card:hover {
+  border-color: color-mix(in srgb, var(--accent) 25%, transparent);
+  background: rgba(22, 27, 34, 0.9);
+  transform: translateY(-4px);
+}
+
+body.light .testimonial-card {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+body.light .testimonial-card:hover {
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.testimonial-quote-mark {
+  font-family: var(--font-cormorant);
+  font-size: 5rem;
+  line-height: 0.8;
+  color: var(--accent);
+  opacity: 0.4;
+  margin-bottom: 1rem;
+}
+
+.testimonial-text {
+  font-family: var(--font-cormorant);
+  font-size: 1.25rem;
+  line-height: 1.7;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--foreground);
+}
+
+.testimonial-line {
+  height: 1px;
+  background: color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+.testimonial-name {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--foreground);
+  letter-spacing: 0.05em;
+}
+
+.testimonial-role {
+  font-size: 0.75rem;
+  color: var(--foreground-muted);
+  margin-top: 0.25rem;
+}
+
+.testimonial-type {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  opacity: 0.7;
+  text-align: right;
+  max-width: 100px;
+}
+
+/* TESTIMONIALS SLIDER */
+
+.testimonial-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: var(--card-border);
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.testimonial-dot--active {
+  background: var(--accent);
+  transform: scale(1.4);
+}
+
+.testimonial-counter {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: var(--foreground-muted);
+  opacity: 0.5;
+}

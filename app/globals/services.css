@@ -1,0 +1,119 @@
+.service-card {
+  border-radius: 2rem;
+  border: 1px solid var(--card-border);
+  padding: 2rem;
+  background: rgba(15, 19, 25, 0.7);
+  backdrop-filter: blur(18px);
+  transition:
+    background 0.5s ease,
+    border-color 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+body.light .service-card {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.service-card:hover {
+  border-color: color-mix(in srgb, var(--accent) 30%, transparent);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  background: rgba(22, 27, 34, 1);
+}
+
+body.light .service-card:hover {
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--accent) 10%, transparent);
+}
+
+.service-card-glow {
+  border-radius: 2rem;
+  background: radial-gradient(
+    circle at top left,
+    color-mix(in srgb, var(--accent) 10%, transparent),
+    transparent 60%
+  );
+}
+
+.service-card-line {
+  height: 1px;
+  width: 5rem;
+  background: color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+.service-card-tags {
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  line-height: 1.6;
+  color: var(--accent);
+}
+
+.service-card-text {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--foreground-muted);
+}
+
+/* ========================
+   SERVICES SLIDER
+   ======================== */
+
+.services-slider {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem 0.5rem 1.5rem;
+  overflow-x: auto;  
+  overflow-y: visible; 
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 1rem;
+  /* скрываем скроллбар */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.services-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.services-slide {
+  scroll-snap-align: start;
+  min-width: 320px;
+  width: 320px;
+}
+
+@media (min-width: 768px) {
+  .services-slide {
+    min-width: 380px;
+    width: 380px;
+  }
+}
+
+.services-arrow {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 9999px;
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  color: var(--accent);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.3s ease, background 0.3s ease, transform 0.3s ease;
+}
+
+.services-arrow:hover {
+  border-color: color-mix(in srgb, var(--accent) 60%, transparent);
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  transform: scale(1.08);
+}
+
+.services-hint {
+  text-align: center;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: var(--foreground-muted);
+  opacity: 0.5;
+}

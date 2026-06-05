@@ -9,12 +9,15 @@ import ParallaxBackground from "@/components/effects/ParallaxBackground";
 
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import Problem from "@/components/Problem";
 import Services from "@/components/Services";
+import Process from "@/components/Process";
 import Work from "@/components/Work";
+import RunningLine from "@/components/RunningLine";
+import Testimonials from "@/components/Testimonials";
 import Philosophy from "@/components/Philosophy";
 import Experience from "@/components/Experience";
-import RunningLine from "@/components/RunningLine";
+import FAQ from "@/components/FAQ";
+import Pricing from "@/components/Pricing";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -30,21 +33,24 @@ export default function Home() {
           : "bg-[#0b0d10] text-white"
       }`}
     >
-
-      <CursorGlow />
-      <ParallaxBackground />
-      <Grain /> 
-      <Hero />
-      <About />
-      <Problem />
-      <Services />
-      <Work />
-      <Philosophy />
-      <RunningLine />    
-      <Experience />        
-      <Contact />
-      <Footer />
-
+      <div className="container">
+        <CursorGlow />
+        <ParallaxBackground />
+        <Grain />
+        <Hero />
+        <About />
+        <Experience />
+        <Philosophy />
+        <Services />
+        <RunningLine />
+        <Process />
+        <Work />        
+        <Testimonials />
+        <Pricing />
+        <FAQ />        
+        <Contact />
+        <Footer />
+      </div>
     </main>
   );
 }

@@ -1,0 +1,40 @@
+.work-card {
+  border: 1px solid var(--card-border);
+  background: #11151c;
+}
+
+body.light .work-card {
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.work-card-image {
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.work-card-overlay {
+  z-index: 10;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0.35) 10%,
+    rgba(0, 0, 0, 0.15) 80%,
+    transparent 100%
+  );
+}
+
+.work-card-hover {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.3) 60%,
+    transparent 100%
+  );
+}
+
+.work-card-title {
+  color: var(--foreground);
+  transition: color 0.3s ease;
+}

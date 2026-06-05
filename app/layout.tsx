@@ -18,6 +18,30 @@ export const metadata = {
     "web design and development",
     "personal brand website",
   ],
+  openGraph: {
+    title: "Ellada Studio | Web Design & Development Studio",
+    description:
+      "We build websites for small businesses and personal brands that look premium, load fast, and actually bring in clients.",
+    url: "https://ellada.studio",
+    siteName: "Ellada Studio",
+    images: [
+      {
+        url: "https://ellada.studio/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Ellada Studio — Web Design with Atmosphere",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ellada Studio | Web Design & Development Studio",
+    description:
+      "Beautiful, fast websites for small businesses and personal brands.",
+    images: ["https://ellada.studio/og-image.jpg"],
+  },
 };
 
 const inter = Inter({
@@ -49,6 +73,20 @@ export default function RootLayout({
                 } catch(e) {}
               })();
             `,
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ProfessionalService",
+              "name": "Ellada Studio",
+              "url": "https://ellada.studio",
+              "description": "Web design and development studio",
+              "serviceType": "Web Design",
+              "areaServed": "Worldwide",
+            }),
           }}
         />
       </head>

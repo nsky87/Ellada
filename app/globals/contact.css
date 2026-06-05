@@ -1,0 +1,19 @@
+.contact-glow {
+  width: 500px;
+  height: 500px;
+  border-radius: 9999px;
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.contact-description {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--foreground-muted);
+}
+
+.contact-success {
+  font-size: 0.875rem;
+  color: #4ade80;
+}

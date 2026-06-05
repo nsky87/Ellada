@@ -1,11 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useTheme } from "@/context/ThemeContext";
 
-export default function Hero() {
-  const { theme } = useTheme();
-
+export default function HeroRu() {
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -41,18 +38,18 @@ export default function Hero() {
         transition={{ duration: 1.2, ease: "easeOut" }}
       >
         <h1 className="hero-title">
-          Digital
+          Цифровой
           <span className="hero-subtitle">
-            web design & development studio
+            веб-дизайн и разработка сайтов
           </span>
           <span className="hero-tagline">
-            with atmosphere
+            с атмосферой
           </span>
         </h1>
 
         <p className="hero-description">
-          We build websites for small businesses and personal brands that look
-          premium, load fast, and actually bring in clients — not just compliments.
+          Делаем сайты для малого бизнеса и личных брендов —
+          красивые, быстрые, которые реально приносят клиентов.
         </p>
 
         <motion.div
@@ -63,11 +60,17 @@ export default function Hero() {
         />
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-          <button onClick={() => scrollToSection("contact")} className="hero-button-primary">
-            Start a Project
+          <button
+            onClick={() => scrollToSection("contact")}
+            className="hero-button-primary"
+          >
+            Начать проект
           </button>
-          <button onClick={() => scrollToSection("work")} className="hero-button-secondary">
-            View Work
+          <button
+            onClick={() => scrollToSection("work")}
+            className="hero-button-secondary"
+          >
+            Наши работы
           </button>
         </div>
 

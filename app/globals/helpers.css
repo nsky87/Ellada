@@ -1,0 +1,168 @@
+.text-primary {
+  color: var(--foreground);
+}
+
+.text-muted {
+  color: var(--foreground-muted);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.glass-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+
+  backdrop-filter: blur(18px);
+
+  transition:
+    background 0.4s ease,
+    border-color 0.4s ease,
+    transform 0.4s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-2px);
+}
+
+.section-header {
+  border-color: var(--card-border);
+}
+
+.section-label {
+  color: var(--foreground-muted);
+  border-color: var(--card-border);
+}
+
+.timeline-line {
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      color-mix(in srgb, var(--accent) 80%, transparent),
+      transparent
+    );
+}
+
+.icon-surface {
+  border: 1px solid
+    color-mix(in srgb, var(--accent) 20%, transparent);
+
+  background:
+    color-mix(in srgb, var(--accent) 10%, transparent);
+
+  color: var(--accent);
+}
+
+.section-gradient {
+  background:
+    linear-gradient(
+      135deg,
+      var(--gradient-from),
+      var(--gradient-via),
+      var(--gradient-to)
+    );
+}
+
+.section-title {
+  color: var(--foreground);
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: 1.05;
+  font-weight: 300;
+}
+
+.input-field {
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid var(--card-border);
+  background: rgba(255,255,255,0.04);
+  padding: 1rem 1.25rem;
+  color: var(--foreground);
+  outline: none;
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: var(--accent);
+  background: rgba(255,255,255,0.07);
+}
+
+body.light .input-field {
+  background: rgba(255,255,255,0.6);
+}
+
+body.light .input-field:focus {
+  background: rgba(255,255,255,0.85);
+}
+
+.primary-button {
+  border-radius: 999px;
+  background: var(--accent);
+  padding: 1rem 2rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #000;
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease;
+}
+
+.primary-button:hover {
+  transform: scale(1.03);
+}
+
+.primary-button:disabled {
+  opacity: 0.5;
+}
+
+.secondary-button {
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  padding: 1rem 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  backdrop-filter: blur(10px);
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.secondary-button:hover {
+  transform: scale(1.04);
+  background:
+    color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+.icon-button {
+  border: 1px solid var(--card-border);
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 999px;
+  padding: 0.75rem;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.icon-button:hover {
+  transform: scale(1.08);
+}
+
+.card-number {
+  color: var(--foreground-muted);
+}
+
+.card-title {
+  color: var(--foreground);
+
+  font-size: 1.875rem;
+  line-height: 1.2;
+  font-weight: 300;
+}

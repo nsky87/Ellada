@@ -1,0 +1,32 @@
+.footer-border {
+  border-color: var(--card-border);
+}
+
+.footer-heading {
+  color: var(--foreground);
+
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.footer-brand {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  color: var(--accent);
+}
+
+.footer-link {
+  color: var(--foreground-muted);
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--accent);
+
+  transform: translateX(2px);
+}

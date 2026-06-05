@@ -7,27 +7,27 @@ import { useRef } from "react";
 const services = [
   {
     icon: Code2,
-    title: "Website Development",
+    title: "Разработка сайтов",
     small: "WordPress • Next.js • React • HTML • CSS • JavaScript",
-    text: "From a simple business site to a custom web app — we build fast, responsive websites that look great and work even better.",
+    text: "От простой визитки до сложного веб-приложения — быстро, адаптивно и с умом.",
   },
   {
     icon: Orbit,
-    title: "Support & Maintenance",
-    small: "Updates • Bug fixes • Performance • Content edits • Technical support",
-    text: "We stay after launch. Regular updates, quick fixes and content changes so you never have to worry about your site again.",
+    title: "Поддержка и обслуживание",
+    small: "Обновления • Исправления • Производительность • Правки контента",
+    text: "Не исчезаем после запуска. Обновляем, правим, держим сайт в порядке — вы занимаетесь бизнесом.",
   },
   {
     icon: Feather,
-    title: "Brand Identity & Design",
-    small: "UI Design • Visual Identity • Logos • Typography • Creative Direction",
-    text: "A brand that feels like you — minimal, atmospheric, memorable. We design visual systems that make small businesses look established.",
+    title: "Брендинг и дизайн",
+    small: "UI Дизайн • Визуальная идентичность • Логотипы • Типографика",
+    text: "Бренд с характером — минималистичный, запоминающийся, такой который хочется показывать.",
   },
   {
     icon: Layers3,
-    title: "SEO & Optimization",
-    small: "SEO structure • Performance • Core Web Vitals • Mobile optimization",
-    text: "A beautiful site is useless if no one finds it. We optimise for speed, search visibility and conversions from day one.",
+    title: "SEO и оптимизация",
+    small: "SEO структура • Производительность • Core Web Vitals • Мобильная оптимизация",
+    text: "Красивый сайт без трафика — деньги на ветер. Делаем так, чтобы вас находили и выбирали.",
   },
 ];
 
@@ -43,7 +43,7 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="py-24 md:py-32">
+    <section id="services" className="py-20">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -52,10 +52,10 @@ export default function Services() {
       >
         {/* HEADER */}
         <div className="section-header mb-16 flex items-center justify-between border-b pb-6">
-          <h2 className="text-3xl font-light md:text-5xl">Services</h2>
+          <h2 className="text-3xl font-light md:text-5xl">Услуги</h2>
           <div className="flex items-center gap-4">
             <span className="section-label text-sm uppercase tracking-[0.3em]">
-              What we do
+              Что мы делаем
             </span>
             {/* СТРЕЛКИ */}
             <div className="hidden md:flex gap-2">
