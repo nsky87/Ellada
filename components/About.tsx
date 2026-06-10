@@ -30,8 +30,7 @@ export default function About() {
 
           <p className="text-primary text-base leading-relaxed">
             Ellada Studio designs and builds websites for small businesses 
-            and personal brands — clean, fast and built to bring in clients, 
-            not just compliments.
+            and personal brands — clean, fast and built to make a real impression and turn visitors into enquiries..
           </p>
 
           <p className="text-muted mt-6 text-base leading-relaxed">
