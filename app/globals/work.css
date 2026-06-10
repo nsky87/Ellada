@@ -1,6 +1,7 @@
 .work-card {
   border: 1px solid var(--card-border);
   background: #11151c;
+  isolation: isolate;
 }
 
 body.light .work-card {
@@ -62,3 +63,36 @@ body.light .work-card {
     scroll-snap-stop: always;
   }
 }
+
+/* WORK CARD TAGS */
+
+.work-card-result {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--foreground-muted);
+  letter-spacing: 0.01em;
+}
+
+.work-card-tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.work-tag {
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+  border-radius: 999px;
+  padding: 0.15rem 0.5rem;
+}
+
+.work-card-link-hint {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+}
+

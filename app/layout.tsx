@@ -45,6 +45,13 @@ export const metadata = {
       "Beautiful, fast websites for small businesses and personal brands.",
     images: ["https://ellada.studio/og-image.jpg"],
   },
+  alternates: {
+    canonical: "https://ellada.studio",
+    languages: {
+      "en": "https://ellada.studio",
+      "ru": "https://ellada.studio/ru",
+    },
+  },
 };
 
 const inter = Inter({

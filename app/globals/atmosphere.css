@@ -3,98 +3,72 @@
   inset: 0;
   overflow: hidden;
   pointer-events: none;
-  z-index: 2;
+  z-index: -1;
 }
 
 .site-atmosphere::before,
 .site-atmosphere::after {
   content: "";
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  pointer-events: none;
 }
 
 /* LEFT IMAGE */
 .site-atmosphere::before {
-  content: "";
-  position: absolute;
   left: 0;
-  top: 0;
   width: 36vw;
-  height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: left center;
-  pointer-events: none;
-  transition:
-    filter 1s ease,
-    background-image 1s ease;
-  mask-image:
-    linear-gradient(
-      to right,
-      black 45%,
-      transparent 100%
-    );
+  mask-image: linear-gradient(to right, black 45%, transparent 100%);
 }
 
 /* RIGHT IMAGE */
 .site-atmosphere::after {
-  content: "";
-  position: absolute;
   right: 0;
-  top: 0;
   width: 42vw;
-  height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: right center;
-  pointer-events: none;
-  transition:
-    filter 1s ease,
-    background-image 1s ease;
-  mask-image:
-    linear-gradient(
-      to left,
-      black 40%,
-      transparent 100%
-    );
+  mask-image: linear-gradient(to left, black 40%, transparent 100%);
 }
 
 /* DARK THEME */
 body.dark .site-atmosphere::before {
   background-image: url("/images/left-greece-dark.png");
   opacity: 0.9;
-  filter:
-    brightness(1.1)
-    contrast(1.05);
 }
 
 body.dark .site-atmosphere::after {
   background-image: url("/images/right-sea-dark.png");
   opacity: 0.9;
-  filter:
-    brightness(1.15)
-    contrast(1.06);
 }
 
 /* LIGHT THEME */
 body.light .site-atmosphere::before {
   background-image: url("/images/left-greece-light.png");
   opacity: 0.7;
-  filter:
-    brightness(1.04)
-    saturate(1.05);
 }
 
 body.light .site-atmosphere::after {
   background-image: url("/images/right-sea-light.png");
   opacity: 0.7;
-  filter:
-    brightness(1.03)
-    saturate(1.08);
 }
 
-@media (max-width: 768px) {
-  body.dark .site-atmosphere::before,
-  body.dark .site-atmosphere::after {
-    opacity: 0.4;
-    filter: brightness(0.5) contrast(1.05);
+/* MOBILE */
+@media (max-width:768px){
+
+  .site-atmosphere::before,
+  .site-atmosphere::after{
+    display:none;
   }
+
+  .hero-ring{
+    display:none;
+  }
+
+  .hero-dust{
+    display:none;
+  }
+
 }

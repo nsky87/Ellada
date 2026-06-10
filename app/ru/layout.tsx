@@ -13,6 +13,12 @@ export const metadata = {
     "создание сайтов",
     "дизайн сайта",
   ],
+  twitter: {
+    card: "summary_large_image",
+    title: "Ellada Studio | Веб-дизайн и разработка сайтов",
+    description: "Красивые, быстрые сайты для малого бизнеса и личных брендов.",
+    images: ["https://ellada.studio/og-image.jpg"],
+  },
   openGraph: {
     title: "Ellada Studio | Веб-дизайн и разработка сайтов",
     description: "Создаём сайты для малого бизнеса и личных брендов — красиво, быстро и с реальным результатом.",
@@ -28,6 +34,13 @@ export const metadata = {
     ],
     locale: "ru_RU",
     type: "website",
+  },
+  alternates: {
+    canonical: "https://ellada.studio/ru",
+    languages: {
+      "en": "https://ellada.studio",
+      "ru": "https://ellada.studio/ru",
+    },
   },
 };
 

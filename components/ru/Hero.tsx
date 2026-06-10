@@ -17,7 +17,7 @@ export default function HeroRu() {
       {/* ATMOSPHERIC RING */}
       <motion.div
         animate={{ rotate: [0, 4, 0], scale: [1, 1.015, 1] }}
-        transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
+        transition={{ duration: 18, repeat:2, ease: "easeInOut" }}
         className="pointer-events-none absolute left-1/2 top-[56%] z-[1] h-[760px] w-[760px] -translate-x-1/2 -translate-y-1/2 rounded-full"
       >
         <div className="hero-ring absolute inset-0 rounded-full" />
@@ -33,9 +33,12 @@ export default function HeroRu() {
 
       <motion.div
         className="relative z-10 text-center"
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
+        initial={{ y: 20 }}
+        animate={{ y: 0 }}
+        transition={{
+        duration: 0.8,
+        ease: "easeOut"
+        }}
       >
         <h1 className="hero-title">
           Цифровой

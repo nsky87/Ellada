@@ -1,0 +1,44 @@
+.glass-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(18px);
+  transition:
+    background 0.4s ease,
+    border-color 0.4s ease,
+    transform 0.4s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-2px);
+}
+
+.card-number {
+  color: var(--foreground-muted);
+}
+
+.card-title {
+  color: var(--foreground);
+
+  font-size: 1.875rem;
+  line-height: 1.2;
+  font-weight: 300;
+}
+
+.timeline-line {
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      color-mix(in srgb, var(--accent) 80%, transparent),
+      transparent
+    );
+   z-index: -10; 
+}
+
+.icon-surface {
+  border: 1px solid
+    color-mix(in srgb, var(--accent) 20%, transparent);
+  background:
+    color-mix(in srgb, var(--accent) 10%, transparent);
+  color: var(--accent);
+}

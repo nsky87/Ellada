@@ -41,11 +41,13 @@ body.light .dark-logo  { display: none; }
   background: color-mix(in srgb, var(--accent) 93%, transparent);
 }
 
-.nav-link {
+.mobile-menu .nav-link  {
   color: #353535;
+}
 
+.nav-link {
+  color: var(--foreground-muted);
   font-size: 0.875rem;
-
   transition:
     color 0.3s ease,
     opacity 0.3s ease;

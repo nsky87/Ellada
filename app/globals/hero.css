@@ -80,8 +80,8 @@ body.light .hero-button-secondary {
 }
 
 .hero-ring {
-  border: 1px solid rgba(214, 185, 140, 0.06);
-  box-shadow: 0 0 80px rgba(214, 185, 140, 0.04);
+  border:1px solid rgba(214,185,140,.05);
+  box-shadow:0 0 30px rgba(214,185,140,.03);
 }
 
 .hero-glow {
@@ -96,12 +96,14 @@ body.light .hero-button-secondary {
 .hero-dust {
   position: absolute;
   border-radius: 9999px;
-  filter: blur(48px);
+  filter: blur(20px);
   background: radial-gradient(
     circle,
     rgba(214, 185, 140, 0.09) 0%,
     transparent 70%
   );
+  opacity: .6;
+  will-change: transform;
 }
 
 .hero-dust--left {

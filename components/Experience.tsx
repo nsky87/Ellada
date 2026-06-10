@@ -45,7 +45,7 @@ export default function Experience() {
           whileInView={{ scaleX: 1 }}
           transition={{ duration: 1.8, ease: "easeInOut" }}
           viewport={{ once: true }}
-          className="timeline-line absolute left-0 top-1/2 hidden h-px w-full origin-left md:block"
+          className="timeline-line absolute left-0 top-1/2 hidden h-px w-full origin-left md:block -z-10"
         />
 
         <div className="grid gap-10 md:grid-cols-4">
