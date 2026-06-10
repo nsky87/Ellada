@@ -6,7 +6,7 @@
   --foreground: #f5f5f4;
   --foreground-muted: #a1a1aa;
   --accent: #d6b98c;
-  --card-bg: rgba(255,255,255,0.03);
+  --card-bg: rgba(31, 31, 31, 0.92);
   --card-border: rgba(255,255,255,0.08);
   --gradient-from: #1b2029;
   --gradient-via: #141922;
@@ -19,7 +19,7 @@ body.light {
   --foreground: #102033;
   --foreground-muted: #486178;
   --accent: #2684d7;
-  --card-bg: rgba(255,255,255,0.78);
+  --card-bg: rgba(255,255,255,0.88);
   --card-border: rgba(16,32,51,0.08);
   --gradient-from: #d8ebfa;
   --gradient-via: #bfdcf0;
@@ -74,4 +74,16 @@ main {
   transition:
     background-color .5s,
     color .5s;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }

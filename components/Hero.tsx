@@ -19,11 +19,12 @@ export default function Hero() {
     >
       <Image
         src="/images/left-greece-dark.png"
-        alt="Ellada Studio"
-        width={1}
-        height={1}
+        alt=""
+        width={600}
+        height={800}
         priority
         className="sr-only"
+        aria-hidden="true"
       />
 
       {/* ATMOSPHERIC RING */}

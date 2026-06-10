@@ -1,4 +1,6 @@
 .glass-card {
+  position: relative;
+  z-index: 2;
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   backdrop-filter: blur(18px);
