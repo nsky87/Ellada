@@ -90,16 +90,29 @@ body.light .testimonial-card:hover {
 /* TESTIMONIALS SLIDER */
 
 .testimonial-dot {
-  width: 6px;
-  height: 6px;
+  width: 24px;
+  height: 24px;
   border-radius: 9999px;
-  background: var(--card-border);
+  background: transparent;
   border: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+  padding: 0;
+}
+
+.testimonial-dot::after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 9999px;
+  background: var(--card-border);
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.testimonial-dot--active {
+.testimonial-dot--active::after {
   background: var(--accent);
   transform: scale(1.4);
 }

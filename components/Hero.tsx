@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useTheme } from "@/context/ThemeContext";
+import Image from "next/image";
 
 export default function Hero() {
   const { theme } = useTheme();
@@ -16,6 +17,14 @@ export default function Hero() {
       id="hero"
       className="hero-section relative isolate flex min-h-screen flex-col items-center justify-center overflow-hidden transition-colors duration-1000"
     >
+      <Image
+        src="/images/left-greece-dark.png"
+        alt="Ellada Studio"
+        width={1}
+        height={1}
+        priority
+        className="sr-only"
+      />
 
       {/* ATMOSPHERIC RING */}
       <motion.div

@@ -29,10 +29,10 @@ export default function Footer() {
             <a href="mailto:hello@ellada.studio" className="footer-link">
               hello@ellada.studio
             </a>
-            <a href="https://t.me/+380999391627" target="_blank" rel="noopener noreferrer" className="footer-link">
+            <a href="https://t.me/+380999391627" target="_blank" rel="noopener noreferrer" aria-label="Contact us on Telegram" className="footer-link">
               Telegram
             </a>
-            <a href="https://wa.me/380999391627" target="_blank" rel="noopener noreferrer" className="footer-link">
+            <a href="https://wa.me/380999391627" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp" className="footer-link">
               WhatsApp
             </a>
           </div>
