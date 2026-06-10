@@ -24,7 +24,7 @@ export default function Footer() {
 
         {/* CONTACTS */}
         <div>
-          <h3 className="footer-heading mb-5">Контакты</h3>
+          <h3 className="footer-heading mb-5">Contact us:</h3>
           <div className="flex flex-col gap-3 text-sm">
             <a href="mailto:hello@ellada.studio" className="footer-link">
               hello@ellada.studio
