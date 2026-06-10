@@ -6,7 +6,7 @@ import { Check } from "lucide-react";
 const plans = [
   {
     name: "Essential",
-    price: "from €500",
+    price: "from $500",
     description: "Perfect for small businesses and personal brands that need a clean, professional online presence.",
     features: [
       "Up to 5 pages",
@@ -23,7 +23,7 @@ const plans = [
   },
   {
     name: "Studio",
-    price: "from €1,000",
+    price: "from $1000",
     description: "For growing businesses that want a distinctive, high-performance website built to convert.",
     features: [
       "Up to 12 pages",
