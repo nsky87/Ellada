@@ -20,6 +20,7 @@ export const metadata = {
   ],
   verification: {
     google: "AMjazb6I7pWgeyAsa6EDGZbdTBPPZ8bhhovJUOkFpyc",
+    yandex: "123d80cdc908e1c6",
   },
   openGraph: {
     title: "Ellada Studio | Web Design & Development Studio",
