@@ -10,8 +10,6 @@ const plans = [
     description: "Perfect for small businesses and personal brands that need a clean, professional online presence.",
     features: [
       "Up to 5 pages",
-      "Mobile-responsive design",
-      "WordPress CMS",
       "Contact form",
       "Basic SEO setup",
       "Google Analytics",
@@ -26,7 +24,7 @@ const plans = [
     price: "from $1000",
     description: "For growing businesses that want a distinctive, high-performance website built to convert.",
     features: [
-      "Up to 12 pages",
+      "Up to 15 pages",
       "Custom UI & brand identity",
       "Next.js or WordPress",
       "Advanced animations",

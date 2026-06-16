@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Philosophy() {
   return (
-    <section className="relative py-20">
+    <section className="relative py-16">
       <motion.div
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}

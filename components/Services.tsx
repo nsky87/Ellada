@@ -51,7 +51,7 @@ export default function Services() {
         viewport={{ once: true }}
       >
         {/* HEADER */}
-        <div className="section-header mb-16 flex items-center justify-between border-b pb-6">
+        <div className="section-header mb-8 md:mb-16 flex items-center justify-between border-b pb-6">
           <h2 className="text-3xl font-light md:text-5xl">Services</h2>
           <div className="flex items-center gap-4">
             <span className="section-label text-sm uppercase tracking-[0.3em]">

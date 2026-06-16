@@ -4,6 +4,7 @@
   overflow: hidden;
   pointer-events: none;
   z-index: -1;
+  background: transparent;
 }
 
 .site-atmosphere::before,
@@ -15,6 +16,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   pointer-events: none;
+  opacity: 0.9;
 }
 
 /* LEFT IMAGE */
@@ -35,13 +37,11 @@
 
 /* DARK THEME */
 body.dark .site-atmosphere::before {
-  background-image: url("/images/left-greece-dark.png");
-  opacity: 0.9;
+  background-image: url("/images/left-greece-dark.png");  
 }
 
 body.dark .site-atmosphere::after {
   background-image: url("/images/right-sea-dark.png");
-  opacity: 0.9;
 }
 
 /* LIGHT THEME */
@@ -59,8 +59,10 @@ body.light .site-atmosphere::after {
 @media (max-width:768px){
 
   .site-atmosphere::before,
-  .site-atmosphere::after{
-    display:none;
+  .site-atmosphere::after,
+  body.light .site-atmosphere::before,
+  body.light .site-atmosphere::after {
+    opacity: .4;
   }
 
   .hero-ring{

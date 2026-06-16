@@ -87,3 +87,7 @@ main {
   white-space: nowrap;
   border-width: 0;
 }
+
+button {
+  cursor: pointer;
+}
