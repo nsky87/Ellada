@@ -17,7 +17,6 @@ import Philosophy from "@/components/ru/Philosophy";
 import Experience from "@/components/ru/Experience";
 import RunningLine from "@/components/ru/RunningLine";
 import FAQ from "@/components/ru/FAQ";
-import Pricing from "@/components/ru/Pricing";
 import Contact from "@/components/ru/Contact";
 import Footer from "@/components/ru/Footer";
 
@@ -46,7 +45,6 @@ export default function Home() {
           <Process />
           <Work />
           <Testimonials />
-          <Pricing />
           <FAQ />        
           <Contact />
           <Footer />

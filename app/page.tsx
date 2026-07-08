@@ -12,7 +12,6 @@ import Testimonials from "@/components/Testimonials";
 import Philosophy from "@/components/Philosophy";
 import Experience from "@/components/Experience";
 import FAQ from "@/components/FAQ";
-import Pricing from "@/components/Pricing";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -33,7 +32,6 @@ export default function Home() {
         <Process />
         <Work />
         <Testimonials />
-        <Pricing />
         <FAQ />
         <Contact />
         <Footer />
