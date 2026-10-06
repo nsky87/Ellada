@@ -45,7 +45,7 @@ export default function Hero() {
       </div>
 
       <motion.div
-        className="relative z-10 text-center"
+        className="relative z-10 text-center pt-32 sm:pt-28 md:pt-0"
         initial={{ y: 20 }}
         animate={{ y: 0 }}
         transition={{
