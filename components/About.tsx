@@ -29,14 +29,11 @@ export default function About() {
         <div className="max-w-xl">
 
           <p className="text-primary text-base leading-relaxed">
-            Ellada Studio designs and builds websites for small businesses 
-            and personal brands — clean, fast and built to make a real impression and turn visitors into enquiries..
+            Ellada Studio designs and builds digital products for small businesses and personal brands - clean, fast, and made to create a real impression and turn visitors into enquiries.
           </p>
 
           <p className="text-muted mt-6 text-base leading-relaxed">
-            We work with WordPress, Next.js and plain HTML — 
-            whatever fits your project best. From first mockup 
-            to launch day, we handle it all in-house.
+            We work with WordPress, Next.js, React and React Native — whatever fits your project best, whether that's a website or a mobile app. From first mockup to launch day (App Store and Google Play included), we handle it all in-house.
           </p>
 
         </div>

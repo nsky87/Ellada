@@ -25,7 +25,7 @@ export const metadata = {
   openGraph: {
     title: "Ellada Studio | Web Design & Development Studio",
     description:
-      "We build websites for small businesses and personal brands that look premium, load fast, and actually bring in clients.",
+      "We build websites and digital products for small businesses and personal brands — from a landing page to a published app — that look premium, load fast, and actually bring in clients, not just compliments.",
     url: "https://ellada.studio",
     siteName: "Ellada Studio",
     images: [

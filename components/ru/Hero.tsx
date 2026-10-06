@@ -41,7 +41,7 @@ export default function HeroRu() {
         }}
       >
         <h1 className="hero-title">
-          Цифровой
+          Ellada Studio
           <span className="hero-subtitle">
             веб-дизайн и разработка сайтов
           </span>
@@ -51,8 +51,7 @@ export default function HeroRu() {
         </h1>
 
         <p className="hero-description">
-          Делаем сайты для малого бизнеса и личных брендов —
-          красивые, быстрые, которые реально приносят клиентов.
+          Делаем сайты и цифровые продукты для малого бизнеса и личных брендов — от лендинга до опубликованного приложения — красивые, быстрые, которые реально приносят клиентов.
         </p>
 
         <motion.div
@@ -67,7 +66,7 @@ export default function HeroRu() {
             onClick={() => scrollToSection("contact")}
             className="hero-button-primary"
           >
-            Начать проект
+            Обсудить проект
           </button>
           <button
             onClick={() => scrollToSection("work")}

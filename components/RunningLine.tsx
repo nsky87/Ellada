@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const items = [
   "Web Development", "Brand Identity", "Web Design", "Logo Creation",
   "WordPress", "React", "Next.js", "UI / UX", "Website Support",
-  "SEO", "Performance", "Custom Development"
+  "SEO", "Performance", "Custom Development", "React Native", "Mobile Apps"
 ];
 
 export default function RunningLine() {

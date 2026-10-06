@@ -3,9 +3,8 @@
 import { motion } from "framer-motion";
 
 const items = [
-  "Web Development", "Brand Identity", "Web Design", "Logo Creation",
-  "WordPress", "React", "Next.js", "UI / UX", "Website Support",
-  "SEO", "Performance", "Custom Development"
+  "Web Разработка", "Фирменный стиль", "Web дизайн", "Создание логотипа",
+  "WordPress", "React", "Next.js", "UI / UX", "Поддержка сайтов", "Мобильные приложения", "Маркетинг", "SEO", "Оптимизация производительности", "Индивидуальная разработка", "React Native"
 ];
 
 export default function RunningLine() {

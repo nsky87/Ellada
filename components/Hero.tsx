@@ -54,9 +54,9 @@ export default function Hero() {
         }}
         >
         <h1 className="hero-title">
-          Digital
+          Ellada Studio
           <span className="hero-subtitle">
-            web design & development studio
+            web design & development
           </span>
           <span className="hero-tagline">
             with atmosphere
@@ -64,8 +64,7 @@ export default function Hero() {
         </h1>
 
         <p className="hero-description">
-          We build websites for small businesses and personal brands that look
-          premium, load fast, and actually bring in clients — not just compliments.
+          We build websites and digital products for small businesses and personal brands - from landing pages to full apps.<br />Fast, beautiful, and built to attract clients - not just compliments.
         </p>
 
         <motion.div
@@ -77,10 +76,10 @@ export default function Hero() {
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           <button onClick={() => scrollToSection("contact")} className="hero-button-primary">
-            Start a Project
+            Discuss a project
           </button>
           <button onClick={() => scrollToSection("work")} className="hero-button-secondary">
-            View Work
+            View our work
           </button>
         </div>
 

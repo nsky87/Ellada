@@ -6,7 +6,7 @@ import { useState } from "react";
 const faqs = [
   {
     question: "How much does a website cost?",
-    answer: "Every project is different, but most websites start from $1000. The final price depends on the scope, features and timeline. We'll give you a clear quote after a free consultation — no hidden fees.",
+    answer: "Every project is different, but most websites start from $200-500. The final price depends on the scope, features and timeline. We'll give you a clear quote after a free consultation — no hidden fees.",
   },
   {
     question: "How long does it take to build a website?",
@@ -26,7 +26,11 @@ const faqs = [
   },
   {
     question: "Do I need to know anything technical?",
-    answer: "Not at all. We handle everything — design, development, hosting setup and launch. We explain things in plain language and make sure you feel confident managing your site after handover.",
+    answer: "Not at all. We handle everything - design, development, hosting setup and launch. We explain things in plain language and make sure you feel confident managing your site after handover.",
+  },
+  {
+    question: "Do you build mobile apps too?",
+    answer: "Yes - alongside websites, we build mobile apps for iOS and Android, from initial concept through to publishing on the App Store and Google Play.",
   },
 ];
 

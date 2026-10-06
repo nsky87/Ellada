@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code2, Orbit, Feather, Layers3 } from "lucide-react";
+import { Code2, Orbit, Feather, Layers3, Bot } from "lucide-react";
 import { useRef } from "react";
 
 const services = [
@@ -10,6 +10,12 @@ const services = [
     title: "Разработка сайтов",
     small: "WordPress • Next.js • React • HTML • CSS • JavaScript",
     text: "От простой визитки до сложного веб-приложения — быстро, адаптивно и с умом.",
+  },
+  {
+    icon: Bot,
+    title: "Разработка мобильных приложений",
+    small: "React Native • Expo • iOS • Android",
+    text: "Есть идея приложения, но непонятно, с чего начать? Проведём от концепции до реального, устанавливаемого приложения — интерфейс, логика и публикация в сторах — без накладных расходов классического dev-агентства.",
   },
   {
     icon: Orbit,
